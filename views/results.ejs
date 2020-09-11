@@ -1,0 +1,12 @@
+<div class="col-sm-6">
+    <h3>Results:</h3>
+    <p>For query:</p>
+    <p><strong><%- query%></strong></p>
+    <div>
+        <ul>
+            <% results.forEach(function(res) { %>
+                <li><%=  res%></li>
+            <% }); %>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="page-header">
+    <h1>Dummy Website</h1>
+</div>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <%if (logged_in) {%>
+            <% include ./options_dashboard %>
+        <%} else {%>
+            <% include ./options_default %>
+        <%}%>
+    </div><!-- /.container-fluid -->
+</nav>

